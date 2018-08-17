@@ -29,7 +29,7 @@ li {
 	list-style-type: none;
 }
 .wrapper {
-	width: 60%;
+	width: 960px;
 	margin: 0 auto;
 }
 body {
@@ -148,15 +148,16 @@ body {
 		background: transparent;
 
 		& h2 {
-			font-size: 37px;
+			font-size: 48px;
 
 		}
 		& span {
-			font-size: 19px;	
+			font-size: 24px;	
 		}
 	}
 	& .works-grid-container {
 		height: 1560px;
+		max-width: 960px;
 		padding-bottom: 100px;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -167,16 +168,70 @@ body {
 		& .work-piece {
 			position: relative;
 			background: #ccc;
-			&:nth-child(odd) {
-				background: #cdc;
-			}
-			&:hover {
-
-			}
-			& img {
+			background-size: cover;
+			background-position: center;
+			& .on-hover {
 				width: 100%;
 				height: 100%;
+				background: rgba(101, 186, 153, .6);
+				display: flex;
+				flex-direction: column;
+				display: none;
+				& .middle-content {
+					margin: auto;
+					color: #fff;
+					font-size: 30px;
+					opacity: 2;
+					& .fa-search {
+						&:hover {
+							cursor: pointer;
+							color: #444442;
+							transition: .25s ease;
+						}
+					}
+				}
+				& .down-content {
+					align-self: center;
+					width: 235px;
+					display: flex;
+					justify-content: space-around;
+					margin-bottom: 23px;
+					font-size: 22px;
+					& .fa-heart {
+						&:hover {
+							cursor: pointer;
+							color: #f90202;
+							transition: .25s ease;
+						}
+					}
+					& .fa-info-circle {
+						&:hover {
+							cursor: pointer;
+							color: #00f9f9;
+							transition: .25s ease;
+						}
+					}
+					& .fa-link {
+						&:hover {
+							cursor: pointer;
+							color: #0950f4;
+							transition: .25s ease;
+						}
+					}
+					& .fa-images {
+						&:hover {
+							cursor: pointer;
+							color: #e0ef39;
+							transition: .25s ease;
+						}
+					}
+				}
 			}
+			&:hover .on-hover {
+				display: flex;
+				
+			}
+			
 		}
 	}
 }
@@ -184,7 +239,6 @@ body {
 	height: 300px;
 	background: url("../images/quote-bg.jpg");
 	background-repeat: no-repeat;
-	background-position: -50px;
 	background-size: cover;
 	display: flex;
 	align-items: center;
@@ -280,9 +334,12 @@ body {
 				font-family: 'Open Sans', sans-serif;
 				font-weight: 600;
 			}
-			& img {
+			& .news-photo {
 				width: 100%;
+				height: 200px;
 				margin-top: 20px;
+				background-size: cover;
+				background-position: center;
 			}
 			& p {
 				margin-top: 18px;
@@ -347,11 +404,13 @@ body {
 			}
 			& .blogpost {
 				margin-top: 30px;
-				& img {
+				&-photo {
 					float: left;
 					width: 70px;
 					height: 70px;
 					margin-right: 2%;
+					background-size: cover;
+					background-position: center;
 				}
 				& p {
 					margin-right: 5%;
