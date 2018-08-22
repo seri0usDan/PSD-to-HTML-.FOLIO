@@ -91,10 +91,23 @@ body {
   padding: 10px;
   padding-bottom: 15px;
   margin-left: 10px;
+  position: relative;
+}
+.main-nav .links ul a:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #65ba99;
+}
+.main-nav .links ul a:hover:before {
+  width: 100%;
+  transition: 0.25s ease-out;
 }
 .main-nav .links ul a:hover {
   color: #65ba99;
-  border-bottom: 1px solid green;
   transition: 0.2s;
 }
 .main-nav .links .social-links {
@@ -111,9 +124,12 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-}
-.main-nav .links .social-links div a {
   color: #252222;
+}
+.main-nav .links .social-links div:hover {
+  color: #FFF;
+  background: #65ba99;
+  transition: 0.2s ease-out;
 }
 /* The grid column markup atomic css style*/
 .col2 {
@@ -159,7 +175,6 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  overflow: none;
   box-sizing: content-box;
   padding-bottom: 100px;
 }
@@ -218,6 +233,7 @@ body {
 }
 #portfolio .works-grid-container .work-piece:hover .on-hover {
   display: flex;
+  transition: all 0.25s;
 }
 .quote {
   height: 300px;
@@ -364,6 +380,7 @@ body {
 }
 #news .right .tags span:hover {
   cursor: pointer;
+  background: #e2534b;
   transition: 0.2s;
 }
 #news .right .blog h4 {
@@ -470,12 +487,15 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 22px;
+  color: #e2534b;
 }
 .bio .left .social-links div:first-child {
   margin-left: 0;
 }
-.bio .left .social-links div a {
-  color: #e2534b;
+.bio .left .social-links div:hover {
+  background: #000;
+  color: #FFF;
+  transition: 0.25s ease;
 }
 .bio .right {
   margin-top: 65px;
@@ -538,18 +558,4 @@ body {
   line-height: 22px;
   display: block;
   font-family: 'Open Sans', sans-serif;
-}
-.workpiece-after::after {
-  content: "Как при ховере сделать то что надо было?, умею только текст при ховере делать =)";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(101, 186, 153, 0.8);
-  z-index: 6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
 }

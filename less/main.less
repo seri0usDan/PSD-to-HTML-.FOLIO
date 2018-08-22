@@ -90,9 +90,23 @@ body {
 				padding: 10px;
 				padding-bottom: 15px;
 				margin-left: 10px;
+				position: relative;
+				&:before {
+					position: absolute;
+					content: "";
+					top: 100%;
+					left: 0;
+					width: 0;
+					height: 1px;
+					background: #65ba99;
+
+				}
+				&:hover:before {
+					width: 100%;
+					transition: .25s ease-out;
+				}
 				&:hover {
 					color: #65ba99;
-					border-bottom: 1px solid green;
 					transition: 0.2s;
 				}
 			}
@@ -110,8 +124,11 @@ body {
 				align-items: center;
 				justify-content: center;
 				font-size: 22px;
-				& a {
-					color: #252222;	
+				color: #252222;	
+				&:hover {
+					color: #FFF;
+					background:#65ba99;
+					transition: .2s ease-out;
 				}
 			}
 		}
@@ -162,7 +179,6 @@ body {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(6, 1fr);
-		overflow: none;
 		box-sizing: content-box;
 		padding-bottom: 100px;
 		& .work-piece {
@@ -229,9 +245,8 @@ body {
 			}
 			&:hover .on-hover {
 				display: flex;
-				
+				transition: all .25s;
 			}
-			
 		}
 	}
 }
@@ -376,7 +391,6 @@ body {
 		& .tags {
 			display: flex;
 			flex-wrap: wrap;
-
 			& span {
 				font-size: 14px;
 				padding: 7px 11px;
@@ -386,6 +400,7 @@ body {
 
 				&:hover {
 					cursor: pointer;
+					background: rgba(226, 83, 75, 1);
 					transition: 0.2s;
 				}
 			}
@@ -497,11 +512,14 @@ body {
 				align-items: center;
 				justify-content: center;
 				font-size: 22px;
+				color: #e2534b;	
 				&:first-child {
 					margin-left: 0;
 				}
-				& a {
-					color: #e2534b;	
+				&:hover{
+					background: #000;
+					color: #FFF;
+					transition: .25s ease;
 				}
 			}
 		}
@@ -567,25 +585,5 @@ body {
 			display: block;
 			font-family: 'Open Sans', sans-serif;
 		}
-	}
-}
-.workpiece-after {
-	&::after {
-		content: "Как при ховере сделать то что надо было?, умею только текст при ховере делать =)";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba(101,186,153,.8);
-		z-index: 6;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 10px;
-
-
-
-
 	}
 }
