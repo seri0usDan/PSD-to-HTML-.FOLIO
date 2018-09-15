@@ -28,13 +28,15 @@ li {
   list-style-type: none;
 }
 .wrapper {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 body {
   font-family: "Bebas-Neue", sans-serif;
   font-weight: normal;
   color: #ffffff;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 .main-header {
   height: 500px;
@@ -52,13 +54,16 @@ body {
   line-height: 67px;
   padding-top: 127px;
   margin-left: 60px;
+  position: relative;
 }
-.main-header span {
+.main-header h1 span {
   font-size: 36px;
   color: #ffffff;
   line-height: 25px;
   font-weight: 600;
-  margin-left: 60px;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 .main-nav {
   background: #252222;
@@ -80,6 +85,8 @@ body {
 .main-nav .links {
   display: flex;
   align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .main-nav .links ul {
   display: flex;
@@ -131,7 +138,9 @@ body {
   background: #65ba99;
   transition: 0.2s ease-out;
 }
-/* The grid column markup atomic css style*/
+.hamburger {
+  display: none;
+}
 .col2 {
   grid-column-start: span 2;
 }
@@ -173,10 +182,12 @@ body {
   height: 1560px;
   max-width: 960px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(175px, 235px));
   grid-template-rows: repeat(6, 1fr);
   box-sizing: content-box;
   padding-bottom: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 #portfolio .works-grid-container .work-piece {
   position: relative;
@@ -192,6 +203,9 @@ body {
   flex-direction: column;
   display: none;
 }
+#portfolio .works-grid-container .work-piece .on-hover a {
+  color: #fff;
+}
 #portfolio .works-grid-container .work-piece .on-hover .middle-content {
   margin: auto;
   color: #fff;
@@ -205,26 +219,42 @@ body {
 }
 #portfolio .works-grid-container .work-piece .on-hover .down-content {
   align-self: center;
-  width: 235px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 23px;
   font-size: 22px;
+  width: 100%;
+}
+#portfolio .works-grid-container .work-piece .on-hover .down-content .fa-heart {
+  padding: 5px 5px;
+  margin: 0 5px;
 }
 #portfolio .works-grid-container .work-piece .on-hover .down-content .fa-heart:hover {
   cursor: pointer;
   color: #f90202;
   transition: 0.25s ease;
 }
+#portfolio .works-grid-container .work-piece .on-hover .down-content .fa-info-circle {
+  padding: 5px 5px;
+  margin: 0 5px;
+}
 #portfolio .works-grid-container .work-piece .on-hover .down-content .fa-info-circle:hover {
   cursor: pointer;
   color: #00f9f9;
   transition: 0.25s ease;
 }
+#portfolio .works-grid-container .work-piece .on-hover .down-content .fa-link {
+  padding: 5px 5px;
+  margin: 0 5px;
+}
 #portfolio .works-grid-container .work-piece .on-hover .down-content .fa-link:hover {
   cursor: pointer;
   color: #0950f4;
   transition: 0.25s ease;
+}
+#portfolio .works-grid-container .work-piece .on-hover .down-content .fa-images {
+  padding: 5px 5px;
+  margin: 0 5px;
 }
 #portfolio .works-grid-container .work-piece .on-hover .down-content .fa-images:hover {
   cursor: pointer;
@@ -234,6 +264,42 @@ body {
 #portfolio .works-grid-container .work-piece:hover .on-hover {
   display: flex;
   transition: all 0.25s;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-heart {
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-heart:hover {
+  cursor: pointer;
+  color: #f90202;
+  transition: 0.25s ease;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-info-circle {
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-info-circle:hover {
+  cursor: pointer;
+  color: #00f9f9;
+  transition: 0.25s ease;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-link {
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-link:hover {
+  cursor: pointer;
+  color: #0950f4;
+  transition: 0.25s ease;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-images {
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+#portfolio .works-grid-container .col2 .on-hover .down-content .fa-images:hover {
+  cursor: pointer;
+  color: #e0ef39;
+  transition: 0.25s ease;
 }
 .quote {
   height: 300px;
@@ -558,4 +624,405 @@ body {
   line-height: 22px;
   display: block;
   font-family: 'Open Sans', sans-serif;
+}
+@media only screen and (max-width: 1050px) {
+  #news .left {
+    padding-left: 15px;
+  }
+  #news .right {
+    padding-right: 15px;
+  }
+  #news .left .date .place {
+    padding-left: 5px;
+  }
+  #contact .email {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .main-header .wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .main-header h1 {
+    font-size: 60px;
+    line-height: 44px;
+    padding: 0;
+    width: 100%;
+  }
+  .logo h2 {
+    font-size: 35px;
+  }
+  .quote h2 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .partners {
+    height: 310px;
+  }
+  .partners .wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+  .partners .wrapper img {
+    padding: 20px 10px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .main-header h1 {
+    margin-left: 20px;
+    white-space: nowrap;
+  }
+  .main-header span {
+    white-space: nowrap;
+  }
+  .hamburger {
+    display: block;
+    z-index: 5;
+    outline: none;
+  }
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    background-color: #fff;
+  }
+  .main-nav .links {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 60vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-left: 2px solid #fff;
+    background: #252222;
+    position: fixed;
+    z-index: 4;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+  }
+  .main-nav .links ul {
+    flex-direction: column;
+    padding-bottom: 50px;
+    width: 100%;
+    align-items: center;
+  }
+  .main-nav .links ul li {
+    margin: 30px;
+  }
+  .main-nav .links ul li a {
+    font-size: 30px;
+  }
+  .main-nav .social-links {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+  }
+  #portfolio .works-grid-container {
+    grid-template-columns: repeat(2, minmax(145px, 250px));
+    height: 2840px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 500px;
+    margin: auto;
+  }
+  .quote h2 {
+    font-size: 25px;
+  }
+  .quote h2:before,
+  .quote h2:after {
+    font-size: 80px;
+  }
+  .quote span {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+  #news h2 {
+    margin: 0;
+    padding-bottom: 40px;
+  }
+  #news .flex-container {
+    flex-direction: column;
+  }
+  #news .left,
+  #news .right {
+    max-width: 600px;
+    width: auto;
+    margin: auto;
+    padding: 15px;
+  }
+  #news .right {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 35px;
+    margin-top: 25px;
+    padding-bottom: 50px;
+  }
+  #news .right .blog h4 {
+    margin-top: 30px;
+  }
+  .bio .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bio .left {
+    margin-left: 0;
+  }
+  .bio .right {
+    text-align: center;
+    padding-bottom: 50px;
+    max-width: 500px;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #contact .phone {
+    font-size: 40px;
+  }
+  #contact .email {
+    font-size: 33px;
+    padding: 20px 0px;
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #contact footer {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .main-header {
+    height: 400px;
+  }
+  .main-header h1 {
+    font-size: 40px;
+    line-height: 31px;
+  }
+  .main-header h1 span {
+    font-size: 28px;
+  }
+  #portfolio .header h2,
+  #news h2,
+  .bio h2,
+  #contact h2 {
+    font-size: 35px;
+  }
+  #portfolio .header span {
+    font-size: 19px;
+  }
+  .quote h2 {
+    font-size: 23px;
+  }
+  .quote h2:before,
+  .quote h2:after {
+    font-size: 60px;
+    padding: 10px;
+  }
+  .bio .left .selfie::before {
+    font-size: 25px;
+  }
+  .quote span {
+    font-size: 18px;
+    padding-top: 15px;
+  }
+  .bio .left .selfie {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  .bio .left .social-links {
+    margin-bottom: 0;
+  }
+  .bio .right h3 {
+    font-size: 20px;
+  }
+  .bio .right p {
+    font-size: 14px;
+  }
+  #contact .phone {
+    font-size: 30px;
+  }
+  #contact .email {
+    font-size: 29px;
+    padding: 10px 15px;
+  }
+  #contact address {
+    font-size: 25px;
+  }
+  #contact footer .copy {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main-header {
+    height: 300px;
+  }
+  .main-header .wrapper {
+    justify-content: center;
+  }
+  .main-header h1 {
+    font-size: 35px;
+    line-height: 27px;
+    margin-left: 5px;
+  }
+  .main-header h1 span {
+    font-size: 21px;
+    line-height: 17px;
+  }
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    width: 25px;
+    height: 3px;
+  }
+  .hamburger-inner:after {
+    bottom: -7px;
+  }
+  .hamburger-inner:before {
+    top: -7px;
+  }
+  .hamburger--arrowalt.is-active .hamburger-inner:before {
+    transform: translate3d(-6px, -6px, 0) rotate(-45deg) scaleX(0.7);
+  }
+  .hamburger--arrowalt.is-active .hamburger-inner:after {
+    transform: translate3d(-6px, 5px, 0) rotate(45deg) scaleX(0.7);
+  }
+  .main-nav .links {
+    width: 80vw;
+  }
+  .main-nav .links ul li {
+    margin: 20px;
+  }
+  .main-nav .links ul li a {
+    font-size: 26px;
+    padding: 3px;
+  }
+  .main-nav .links .social-links div {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+  .logo h2 {
+    font-size: 28px;
+  }
+  #portfolio .header h2,
+  #news h2,
+  .bio h2,
+  #contact h2 {
+    font-size: 30px;
+  }
+  #portfolio .header span {
+    font-size: 17px;
+  }
+  .quote {
+    height: 250px;
+  }
+  .quote h2 {
+    font-size: 16px;
+  }
+  .quote h2:before,
+  .quote h2:after {
+    font-size: 40px;
+  }
+  .quote span {
+    font-size: 15px;
+    padding: 0;
+  }
+  #news .left .date .day {
+    font-size: 10px;
+    padding: 6px 13px;
+  }
+  #news .left .date .place {
+    font-size: 11px;
+  }
+  #news .left .article-content h4 {
+    font-size: 13px;
+  }
+  #news .left .article-content p,
+  #news .right .blog .blogpost p {
+    font-size: 12px;
+  }
+  #news .left .article-content a {
+    font-size: 12px;
+  }
+  #news .right h5,
+  #news .right .blog h4 {
+    font-size: 16px;
+  }
+  #news .right .tags span {
+    font-size: 11px;
+  }
+  #news .right .blog .blogpost span {
+    font-size: 10px;
+  }
+  .bio .right h3 {
+    font-size: 18px;
+  }
+  .bio .right p {
+    font-size: 12px;
+  }
+  .bio .left .social-links div {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .bio .left .selfie {
+    width: 180px;
+    height: 180px;
+  }
+  .bio .left .selfie img {
+    width: 130px;
+  }
+  .bio .left {
+    margin-top: 110px;
+  }
+  #contact .phone {
+    font-size: 25px;
+  }
+  #contact .email {
+    font-size: 22px;
+    padding: 5px 10px;
+    border-width: 2px;
+    line-height: 28px;
+  }
+  #contact address {
+    font-size: 20px;
+  }
+  #contact footer .copy {
+    font-size: 10px;
+  }
+  #contact footer {
+    margin-top: 30px;
+  }
+  #portfolio .works-grid-container .work-piece .on-hover .down-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #portfolio .works-grid-container .work-piece .on-hover .down-content .far,
+  #portfolio .works-grid-container .work-piece .on-hover .down-content .fas {
+    padding: 5px 10px;
+  }
+  #portfolio .works-grid-container .col2 .on-hover .down-content {
+    flex-direction: row;
+  }
+  #portfolio .works-grid-container .col2 .on-hover .down-content .fa-heart {
+    padding: 5px 10px;
+    margin: 0 10px;
+  }
+  #portfolio .works-grid-container .col2 .on-hover .down-content .fa-info-circle {
+    padding: 5px 10px;
+    margin: 0 10px;
+  }
+  #portfolio .works-grid-container .col2 .on-hover .down-content .fa-link {
+    padding: 5px 10px;
+    margin: 0 10px;
+  }
+  #portfolio .works-grid-container .col2 .on-hover .down-content .fa-images {
+    padding: 5px 10px;
+    margin: 0 10px;
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0">
 	<title>.Folio</title>
 
 	<!--    Favicon      -->
@@ -19,16 +20,17 @@
 	<!--    /Favicon      -->
 
 	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/hamburgers.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/magnific-popup.css">
 	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 	<header class = "main-header">
 		<div class="wrapper">
-			<h1>.FOLIO<br>ONE PAGE<br>PSD THEME</h1>
-			<span>Simple, clear, minimal portfolio template</span>
+			<h1>.FOLIO<br>ONE PAGE<br>PSD THEME <span>Simple, clear, minimal portfolio template</span></h1>
 		</div>
 	</header>
 	<nav class = "main-nav">
@@ -38,10 +40,10 @@
 			</div>
 			<div class="links">
 				<ul>
-					<li><a href="#portfolio">work</a></li>
-					<li><a href="#news">NEWS </a></li>
-					<li><a href="#bio">bio</a></li>
-					<li><a href="#contact">contact</a></li>
+					<li><a href="#portfolio" class = "anchor">work</a></li>
+					<li><a href="#news" class = "anchor">NEWS </a></li>
+					<li><a href="#bio" class = "anchor">bio</a></li>
+					<li><a href="#contact" class = "anchor">contact</a></li>
 				</ul>
 				<div class="social-links">
 					<a href="#"><div><i class="fab fa-linkedin"></i></div></a>
@@ -50,6 +52,11 @@
 					<a href="#"><div><i class="fab fa-twitter"></i></div></a>
 				</div>
 			</div>
+			<button class="hamburger hamburger--arrowalt" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
 		</div>	
 	</nav>
 	<section id="portfolio">
@@ -61,199 +68,271 @@
 			<div class="works-grid-container">
 				<div class="work-piece row1 col2 n1" style = "background-image: url(images/portfolio/1.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/1.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row1 col2 n2" style = "background-image: url(images/portfolio/2.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/2.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece col2 n3" style = "background-image: url(images/portfolio/3.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/3.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row2 col2 n4" style = "background-image: url(images/portfolio/4.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/4.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row3 n5" style = "background-image: url(images/portfolio/5.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/5.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row3 n6" style = "background-image: url(images/portfolio/6.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/6.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row3 n7" style = "background-image: url(images/portfolio/7.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/7.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row3 n8" style = "background-image: url(images/portfolio/8.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/8.jpeg"><i class="fas fa-search"></i></a></i></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row4 n9" style = "background-image: url(images/portfolio/9.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/9.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row4 n10" style = "background-image: url(images/portfolio/10.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/10.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row4 n11" style = "background-image: url(images/portfolio/11.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/11.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row4 n12" style = "background-image: url(images/portfolio/12.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/12.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece col2 row5 n13" style = "background-image: url(images/portfolio/13.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/13.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row5 n14" style = "background-image: url(images/portfolio/14.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/14.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row5 n15" style = "background-image: url(images/portfolio/15.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/15.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+						  	<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row6" id = "n16" style = "background-image: url(images/portfolio/16.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/16.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece row6 n17" style = "background-image: url(images/portfolio/17.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/17.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="work-piece col2 row6 n18" style = "background-image: url(images/portfolio/18.jpeg)">
 					<div class="on-hover">
-						<div class="middle-content"><i class="fas fa-search"></i></div>
+						<div class="middle-content"><a href="images/portfolio/18.jpeg"><i class="fas fa-search"></i></a></div>
 						<div class="down-content">
-							<i class="far fa-images"></i>
-							<i class="fas fa-link"></i>
-							<i class="fas fa-info-circle"></i>
-							<i class="fas fa-heart"></i>
+							<div class="down-content__left">
+								<i class="far fa-images"></i>
+								<i class="fas fa-link"></i>
+							</div>
+							<div class="down-content__left">
+								<i class="fas fa-info-circle"></i>
+								<i class="fas fa-heart"></i>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -327,7 +406,6 @@
 				</div>
 			</div>
 		</div>
-		
 	</section>
 	<section class="partners">
 		<div class="wrapper">
@@ -389,11 +467,23 @@
 			</footer>
 		</div>
 	</section>
+
+
+
+<!-- // Jquery -->
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous">
 </script>
+
+<!-- // Magnific Popup -->
+
+<script src = "js/jquery.magnific-popup.min.js"></script>
+
+<!-- // Main stylesheet -->
+
 <script src = "js/main.js"></script>	
 </body>
 </html>
