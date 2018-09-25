@@ -1,4 +1,17 @@
 $(document).ready(function(){
+
+  /*----------------------------
+				Preloader
+  -----------------------------*/
+  
+  setTimeout(function() {	
+		$('#preloader').fadeOut(); 
+  }, 1000);
+
+  /*----------------------------
+				Smooth Scroll
+  -----------------------------*/
+  
   $("a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
@@ -10,6 +23,10 @@ $(document).ready(function(){
       });
     } 
   });
+
+  /*----------------------------
+				Hamburger Toggle
+  -----------------------------*/
 
   $(".hamburger, .anchor").click(function () {
     if ($(".main-nav .links").css("transform").toLowerCase() == "none" && $(window).width() < 750 ) {
@@ -24,6 +41,10 @@ $(document).ready(function(){
       $("body").css("overflow", "inherit");
     }
   });
+
+  /*----------------------------
+				Magnific Popup Init
+  -----------------------------*/
 
   $('.work-piece').magnificPopup({
     delegate: 'a', 

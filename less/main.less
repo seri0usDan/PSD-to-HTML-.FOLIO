@@ -16,10 +16,21 @@
 	font-style: normal; 
 	src: url("../fonts/BebasNeue Bold.otf") format("opentype");
 }
-
-
-
-
+@keyframes scale {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+		50% {
+		transform: scale(0.7);
+		opacity: 1;
+	}
+		100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+	
 * {
 	margin: 0;
 	padding: 0;
@@ -41,6 +52,49 @@ body {
 	color: #ffffff;
 	min-width: 320px;
 	overflow-x: hidden;
+}
+.preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #fff;
+	z-index: 999;
+	&.done {
+		transition: opacity .3s ease;
+		opacity: 0;
+		display: none;
+	}	
+}
+	
+.loader {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		border-width: 4px;
+		border-style: solid;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		border-color: #65BA99;
+		top: 0;
+		left: 0;
+	}
+	&:before {
+		animation: scale 1.2s linear 0s infinite;
+	}
+	&:after {
+		opacity: 0;
+		animation: scale 1.2s linear 0.5s infinite;
+	}
 }
 .main-header {
 	height: 500px;
